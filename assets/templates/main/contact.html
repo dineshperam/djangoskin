@@ -1,0 +1,393 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Skin Cancer | Classification</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="{% static 'user/site.webmanifest' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'user/assets/img/favicon.ico' %}">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'user/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/animated-headline.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/style.css' %}">
+</head>
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'user/assets/img/logo/loder.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!--? Header Start -->
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="{% url 'index' %}"><img src="" alt=""><h1 style="width:350px;">Skin Cancer Classification</h1></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav> 
+                                        <ul id="navigation">
+                                            <li><a href="{% url 'index' %}">Home</a></li>
+                                            <li><a href="{% url 'about_us' %}">About</a></li>
+                                            <li><a href="{% url 'user_login' %}">Login</a></li>
+                                            <li><a href="{% url 'admin_login' %}">Admin</a> 
+                                            </li>
+                                            <li><a href="{% url 'contact_us' %}">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block ml-15">
+                                    <a href="{% url 'register' %}" class="btn header-btn">Register</a>
+                                </div>
+                            </div>
+                        </div>   
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Header End -->
+</header>
+<main>
+    <!--? Slider Area Start-->
+    <div class="slider-area slider-area2">
+        <div class="slider-active dot-style">
+            <!-- Slider Single -->
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-7 col-lg-8 col-md-10 ">
+                         <div class="hero-wrapper">
+                            <div class="hero__caption">
+                                <h1 data-animation="fadeInUp" data-delay=".3s">contact</h1>
+                                <p data-animation="fadeInUp">"Protect your skin, shield your future,<br>Wear sunscreen daily."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+<!-- Slider Area End -->
+<!--?  Contact Area start  -->
+<section class="contact-section">
+    <div class="container">
+        <div class="d-none d-sm-block mb-5 pb-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.2382083310904!2d78.546814974529!3d17.35226698352897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9978d5a0a633%3A0x7f965425ffaf7960!2sCodebook!5e0!3m2!1sen!2sin!4v1690270132395!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <script>
+                function initMap() {
+                  var uluru = { lat: -25.363, lng: 131.044 };
+                  var grayStyles = [
+                    {
+                      featureType: "all",
+                      stylers: [{ saturation: -90 }, { lightness: 50 }],
+                    },
+                    {
+                      elementType: "labels.text.fill",
+                      stylers: [{ color: "#ccdee9" }],
+                    },
+                  ];
+                  var map = new google.maps.Map(document.getElementById("map"), {
+                    center: { lat: -31.197, lng: 150.744 },
+                    zoom: 9,
+                    styles: grayStyles,
+                    scrollwheel: false,
+                  });
+                }
+              </script>
+            
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="contact-title">Get in Touch</h2>
+            </div>
+            <div class="col-lg-8">
+                <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message" ></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name"required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email"required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject"required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3 offset-lg-1">
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-home"></i></span>
+                    <div class="media-body">
+                        <h3>Address</h3>
+                        <p>L.B Nagar Metro Statrion Pillar No A1662, Siris Road, Snehapuri colony, Hyderabad-74</p>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                    <div class="media-body">
+                        <h3>+91 8555 8879 86</h3>
+                        <p>Mon to Sat 09:00 AM to 06:00 PM</p>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-email"></i></span>
+                    <div class="media-body">
+                        <h3>info@codebook.in</h3>
+                        <p>Send us your query anytime!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Area End -->
+<!--? About Law Start-->
+<section class="about-low-area mt-60">
+    <div class="container">
+        <div class="about-cap-wrapper">
+            <div class="row">
+                <div class="col-xl-5  col-lg-6 col-md-10 offset-xl-1">
+                    <div class="about-caption mb-50">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle mb-35">
+                            <h2>100% satisfaction guaranteed.</h2>
+                        </div>
+                        <p>Protect your skin, shield your future. Wear sunscreen daily.</p>
+                        <a href="" class="border-btn">Make an Appointment</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <!-- about-img -->
+                    <div class="about-img">
+                        <div class="about-font-img">
+                            <img src="assets/img/gallery/about2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Law End-->
+</main>
+<footer>
+    <div class="footer-wrappr section-bg3" data-background="{% static 'user/assets/img/gallery/footer-bg.png' %}">
+        <div class="footer-area footer-padding ">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12">
+                        <div class="single-footer-caption mb-50">
+                            <!-- logo -->
+                            <div class="footer-logo mb-25">
+                                <a href="{% url 'index' %}"><img src="" alt=""><h1>Skin Cancer Classification</h1></a>
+                            </div>
+                            <div class="header-area">
+                                <div class="main-header main-header2">
+                                    <div class="menu-main d-flex align-items-center justify-content-start">
+                                        <!-- Main-menu -->
+                                        <div class="main-menu main-menu2">
+                                            <nav> 
+                                                <ul>
+                                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                                    <li><a href="{% url 'about_us' %}">About</a></li>
+                                                    <li><a href="{% url 'user_login' %}">Login</a></li>
+                                                    <li><a href="{% url 'admin_login' %}">Admin</a></li>
+                                                    <li><a href="{% url 'contact_us' %}">Contact</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                            <!-- social -->
+                            <div class="footer-social mt-50">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-caption">
+                            <div class="footer-tittle mb-50">
+                                <h4>Subscribe newsletter</h4>
+                            </div>
+                            <!-- Form -->
+                            <div class="footer-form">
+                                <div id="mc_embed_signup">
+                                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
+                                        <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your email'">
+                                        <div class="form-icon">
+                                            <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
+                                                Subscribe
+                                            </button>
+                                        </div>
+                                        <div class="mt-10 info"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="footer-tittle">
+                                <div class="footer-pera">
+                                    <p>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium misem ut ipsum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row">
+                        <div class="col-xl-10 ">
+                            <div class="footer-copy-right">
+                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://www.codebook.in/" target="_blank">Codebook Developer</a>
+                              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- Scroll Up -->
+<div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- JS here -->
+
+<script src="{% static './user/assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="{% static './user//assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static './assets/js/popper.min.js' %}"></script>
+<script src="{% static './assets/js/bootstrap.min.js' %}"></script>
+<!-- Jquery Mobile Menu -->
+<script src="{% static './user/assets/js/jquery.slicknav.min.js' %}"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="{% static './user/assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static './user/assets/js/slick.min.js' %}"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="{% static './user/assets/js/wow.min.js' %}"></script>
+<script src=".{% static '/user/assets/js/animated.headline.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.magnific-popup.js' %}"></script>
+
+<!-- Date Picker -->
+<script src=".{% static './user/assets/js/gijgo.min.js' %}"></script>
+<!-- Nice-select, sticky -->
+<script src="{% static './user/assets/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.sticky.js' %}"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="{% static './user/assets/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static './user/assets/js/waypoints.min.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.countdown.min.js' %}"></script>
+<script src="{% static './user/assets/js/hover-direction-snake.min.js' %}"></script>
+
+<!-- contact js -->
+<script src="{% static './user/assets/js/contact.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.form.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.validate.min.js' %}"></script>
+<script src=".{% static '/user/assets/js/mail-script.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+<!-- Jquery Plugins, main Jquery -->	
+<script src="{% static './user/assets/js/plugins.js' %}"></script>
+<script src="{% static './user/assets/js/main.js' %}"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                <script>swal({
+                        title: "Success!",
+                        text: "{{message}}",
+                        icon: "success",
+                        button: "OK",
+                    });
+                </script>
+            
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+                <script>swal({
+                        title: "Warning :)",
+                        text: "{{message}}",
+                        icon: "warning",
+                        button: "OK",
+                    
+                    });
+                </script>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                <script>swal({
+                        title: "info :)",
+                        text: "{{message}}",
+                        icon: "info",
+                        button: "OK",
+                    });
+                </script>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                <script>swal({
+                        title: "error :)",
+                        text: "{{message}}",
+                        icon: "error",
+                        button: "OK",
+                    });
+                </script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+</body>
+</html>

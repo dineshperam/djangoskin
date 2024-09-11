@@ -1,0 +1,507 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Skin Cancer | Classification</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="{% static 'user/site.webmanifest' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'user/assets/img/favicon.ico' %}">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'user/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/animated-headline.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'user/assets/css/style.css' %}">
+
+
+    <style>
+        .model-container {
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          max-width: 50%; 
+          margin-left: auto; 
+          margin-right: auto; 
+          margin-top: 50px;
+          margin-bottom: 100px;
+          height: 310px;
+          border: none; 
+          padding-left: 50px;
+          padding-right: 50px;
+          background-color: #ADD8E6;
+          transition: box-shadow 0.3s;
+        }
+        
+        .model-container:hover {
+          box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+          .form-check-label {
+            font-size: 1.2rem;
+            margin-left: 10px; 
+          }
+      
+          .form-check-input[type="checkbox"] {
+            width: 1.5em;
+            height: 1.5em;
+            margin-right: 5px; 
+          }
+      
+          .btn-xl {
+            width: 150px;
+            height: 50px; 
+            display: block;
+            margin: 0 auto;
+
+          
+          }
+          
+          .model-container .form-check-label {
+      
+            color: black; 
+          }
+        
+    .form-check-input[type="checkbox"],
+    .form-check-input[type="radio"] {
+      display: none;
+    }
+    
+    .form-check-label {
+      position: relative;
+      padding-left: 30px; 
+      cursor: pointer;
+    }
+    
+    .form-check-label::before {
+      content: "";
+      display: inline-block;
+      width: 20px; 
+      height: 20px; 
+      margin-right: 10px;
+      position: absolute;
+      left: 0;
+      border: 2px solid #007bff; 
+      border-radius: 50%; 
+      transition: background-color 0.3s, transform 0.3s; 
+    }
+    
+    .form-check-input[type="checkbox"]:checked + .form-check-label::before {
+      background-color: #007bff;
+    }
+    
+    .form-check-label::after {
+      content: "";
+      display: inline-block;
+      width: 10px; 
+      height: 10px; 
+      position: absolute;
+      left: 5px; 
+      background-color: #fff; 
+      border-radius: 50%; 
+      transition: transform 0.3s; 
+      transform: scale(0); 
+    }
+    
+    
+    .form-check-input[type="checkbox"]:checked + .form-check-label::before + .form-check-label::after {
+      transform: scale(1); 
+    }
+    
+    
+    .form-check-label::before {
+      border-radius: 50%; 
+    }
+    
+    
+    .form-check-input[type="radio"]:checked + .form-check-label::before {
+      background-color: #007bff; 
+    }
+    
+    .form-check-input[type="radio"]:checked + .form-check-label::before::after {
+      content: "";
+      display: inline-block;
+      width: 10px; 
+      height: 10px; 
+      position: absolute;
+      left: 5px; 
+      background-color: #fff; 
+      border-radius: 50%; 
+    }
+    
+      .model-container {
+      }
+    
+      .model-container .btn-group {
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      .model-container .btn-group label {
+        flex: 1;
+        margin-right: 10px;
+      }
+    
+      .model-container .btn-group label.active {
+        background-color: #007bff;
+        color: white;
+      }
+    
+        .custom-input {
+            height: 45px;
+        }
+        .custom-label {
+            font-size: 20px; 
+        }
+        .card-header {
+            font-size: 15px; 
+            font-weight: bold; 
+        }
+        
+        .custom-input { 
+            font-size: 18px; 
+           
+        }
+
+
+        .hero__caption1 {
+          position: absolute;
+          font-size: 28px; 
+          left: 50%;
+          transform: translate(-50%, -50%);
+      } 
+      .heading1 {
+          text-align: center;
+          font-size: 28px;
+          width:350px; 
+          margin-top: 60px;;
+      
+      } 
+
+        
+    </style>
+
+</head>
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'user/assets/img/logo/loder.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!--? Header Start -->
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="{% url 'user_dashboard' %}"><img src="" alt=""><h1 style="width:350px;">Skin Cancer Classification</h1></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav> 
+                                        <ul id="navigation">
+                                            <li><a href="{% url 'user_dashboard' %}">Dashboard</a></li>
+                                            <li><a href="{% url 'user_profile' %}">Profile</a></li>
+                                            <li><a href="{% url 'Classification' %}" >Cancer Classification</a></li>
+                                            <li><a href="{% url 'user_feedback' %}">Feedback</a> 
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block ml-15">
+                                    <a href="{% url 'index' %}"class="btn header-btn">Logout</a>
+                                </div>
+                            </div>
+                        </div>  
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Slider Area Start-->
+        <div class="slider-area slider-area2">
+            <div class="slider-active dot-style">
+                <!-- Slider Single -->
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-7 col-lg-8 col-md-10 ">
+                             <div class="hero-wrapper">
+                                <div class="hero__caption">
+                                    <h1 data-animation="fadeInUp" data-delay=".3s">Classification</h1>
+                                    <p data-animation="fadeInUp" data-delay=".6s">You can Classifiy your <br>Skin Cancer here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <!-- Slider Area End -->
+
+
+    <!-- Start Start -->
+    <div class="hero__caption1">
+      <h1 data-animation="fadeInUp"  class="heading1">Cancer Classification</h1>
+  </div>
+
+
+    <div class="model-container"><br><br>
+        <form method="post" enctype="multipart/form-data" method="post" >
+          {% csrf_token %}
+          <h2>Choose Your Model</h2>
+          <br>
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <div class="btn-group" role="group" aria-label="Model Selection">
+                    <label class="btn btn-outline-primary">
+                      <input type="radio" name="model_type" value="CNN" required> Cnn
+                    </label><br>
+                    <label class="btn btn-outline-secondary">
+                      <input type="radio" name="model_type" value="Efficientnet" required> Efficientnet
+                    </label>
+                    <label class="btn btn-outline-success">
+                      <input type="radio" name="model_type" value="Inception" required> Inceptiion
+                    </label>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3">
+            <label for="file" class="form-label custom-label" style="color:black;">Choose Image</label>
+            <input class="form-control form-control-lg custom-input mb-10" id="file" type="file" name="image" accept=".jfif,.jpg,.jpeg,.png,.gif" required>
+            <button type="submit" class="btn btn-primary btn-xl py-2 mt-10">Submit</button>
+          </div>
+        </form>
+      </div>
+      
+      <script>
+        document.querySelectorAll('.btn-group label').forEach(function(label) {
+          label.addEventListener('click', function() {
+            // Uncheck all other radio buttons
+            document.querySelectorAll('.btn-group label').forEach(function(otherLabel) {
+              if (otherLabel !== label) {
+                otherLabel.classList.remove('active');
+                otherLabel.querySelector('input').checked = false;
+              }
+            });
+      
+            // Check the clicked radio button
+            label.classList.add('active');
+            label.querySelector('input').checked = true;
+          });
+        });
+      </script>
+      
+
+    
+    <!-- Start End -->
+
+</main>
+<footer>
+  <div class="footer-wrappr section-bg3" data-background="{% static 'user/assets/img/gallery/footer-bg.png' %}">
+        <div class="footer-area footer-padding ">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12">
+                        <div class="single-footer-caption mb-50">
+                            <!-- logo -->
+                            <div class="footer-logo mb-25">
+                                <a href="{% url 'user_dashboard' %}"><img src="" alt=""><h1>Skin Cancer Classification</h1></a>
+                            </div>
+                            <div class="header-area">
+                                <div class="main-header main-header2">
+                                    <div class="menu-main d-flex align-items-center justify-content-start">
+                                        <!-- Main-menu -->
+                                        <div class="main-menu main-menu2">
+                                            <nav> 
+                                                <ul>
+                                                    <li><a href="{% url 'user_dashboard' %}">Dashboard</a></li>
+                                                    <li><a href="{% url 'user_profile' %}">Profile</a></li>
+                                                    <li><a href="{% url 'Classification' %}">Cancer Classification</a> 
+                                                    </li>
+                                                    <li><a href="{% url 'user_feedback' %}">Feedback</a> 
+                                                    <li><a href="{% url 'index' %}">Logout</a></li>
+                                                </ul>
+                                             
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                            <!-- social -->
+                            <div class="footer-social mt-50">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="single-footer-caption">
+                            <div class="footer-tittle mb-50">
+                                <h4>Subscribe newsletter</h4>
+                            </div>
+                            <!-- Form -->
+                            <div class="footer-form">
+                                <div id="mc_embed_signup">
+                                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
+                                        <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your email'">
+                                        <div class="form-icon">
+                                            <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
+                                                Subscribe
+                                            </button>
+                                        </div>
+                                        <div class="mt-10 info"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="footer-tittle">
+                                <div class="footer-pera">
+                                    <p>Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium misem ut ipsum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row">
+                        <div class="col-xl-10 ">
+                            <div class="footer-copy-right">
+                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://www.codebook.in/" target="_blank">Codebook Developer</a>
+                              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+  <!-- Scroll Up -->
+  <div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- JS here -->
+
+<script src="{% static './user/assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="{% static './user//assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static './assets/js/popper.min.js' %}"></script>
+<script src="{% static './assets/js/bootstrap.min.js' %}"></script>
+<!-- Jquery Mobile Menu -->
+<script src="{% static './user/assets/js/jquery.slicknav.min.js' %}"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="{% static './user/assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static './user/assets/js/slick.min.js' %}"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="{% static './user/assets/js/wow.min.js' %}"></script>
+<script src=".{% static '/user/assets/js/animated.headline.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.magnific-popup.js' %}"></script>
+
+<!-- Date Picker -->
+<script src=".{% static './user/assets/js/gijgo.min.js' %}"></script>
+<!-- Nice-select, sticky -->
+<script src="{% static './user/assets/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.sticky.js' %}"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="{% static './user/assets/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static './user/assets/js/waypoints.min.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.countdown.min.js' %}"></script>
+<script src="{% static './user/assets/js/hover-direction-snake.min.js' %}"></script>
+
+<!-- contact js -->
+<script src="{% static './user/assets/js/contact.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.form.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.validate.min.js' %}"></script>
+<script src=".{% static '/user/assets/js/mail-script.js' %}"></script>
+<script src="{% static './user/assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+<!-- Jquery Plugins, main Jquery -->	
+<script src="{% static './user/assets/js/plugins.js' %}"></script>
+<script src="{% static './user/assets/js/main.js' %}"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                <script>swal({
+                        title: "Success!",
+                        text: "{{message}}",
+                        icon: "success",
+                        button: "OK",
+                    });
+                </script>
+            
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+                <script>swal({
+                        title: "Warning :)",
+                        text: "{{message}}",
+                        icon: "warning",
+                        button: "OK",
+                    
+                    });
+                </script>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                <script>swal({
+                        title: "info :)",
+                        text: "{{message}}",
+                        icon: "info",
+                        button: "OK",
+                    });
+                </script>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                <script>swal({
+                        title: "error :)",
+                        text: "{{message}}",
+                        icon: "error",
+                        button: "OK",
+                    });
+                </script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+</body>
+</html>
